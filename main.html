@@ -60,6 +60,7 @@
 					<option>2021</option>
 					<option>2022</option>
 					<option>2023</option>
+				</select>
 				<div class="invalid-feedback">
 					Please select a valid graduation year!
 				</div>
@@ -68,7 +69,7 @@
 				<label for="roll-no-input" class="form-label">Roll No.</label>
 			    <input type="text" class="form-control" id="roll-no-input" required>
 			    <div class="invalid-feedback">
-			      Please provide a valid zip.
+			      Please provide a valid Roll no.
 			    </div>
 			</div>
 			 <div class="col-12">
@@ -85,8 +86,23 @@
 			</div>
 			</form>
 		</div>
-	<script type="text/javascript" src="./script.js">
-</script>
+	<script type="text/javascript" src="./script.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous">
+		(function () {
+    'use strict'
+    var forms = document.querySelectorAll('.needs-validation')
+    Array.prototype.slice.call(forms)
+        .forEach(function (form) {
+            form.addEventListener('submit', function (event) {
+                if (!form.checkValidity()) {
+                    event.preventDefault()
+                    event.stopPropagation()
+                }
+                form.classList.add('was-validated')
+            }, false)
+        })
+	})()
+	</script>
 
 </body>
 
